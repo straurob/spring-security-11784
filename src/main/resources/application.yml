@@ -1,0 +1,14 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: test-client-id
+            client-secret: test-client-secret
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/auth/realms/myrealm
+            user-name-attribute: preferred_username
